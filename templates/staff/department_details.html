@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Staff</h1>
+
+<table>
+<thead>
+<tr>
+<th>Emp Name</th>
+<th>Department</th>
+</tr>
+</thead>
+<tbody>
+{% for emp in obj_list %}
+<tr>
+	
+<td>{{ emp.employee_name }}</td>
+<td>{{ emp.department }}</td>
+</tr>
+
+{% endfor %}
+</tbody>
+
+</table>
+
+</body>
+</html>

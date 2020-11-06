@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Staff</h1>
+
+<table>
+<thead>
+<tr>
+<th>Emp Name</th>
+<th>Department</th>
+</tr>
+</thead>
+<tbody>
+{% for emp in object_list %}
+<tr>
+<td>{{ emp.employee_name }}</td>
+<td>{{ emp.department }}</td>
+<td><a  href="{% url "company_staff:employee_view" emp.id %}">details</a></td>
+</td>
+</tr>
+
+{% endfor %}
+</tbody>
+
+</table>
+<a  href="{% url "company_staff:employee_create"  %}">Create New</a>
+</body>
+</html>
